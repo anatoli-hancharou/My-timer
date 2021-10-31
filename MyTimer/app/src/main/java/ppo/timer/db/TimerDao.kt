@@ -19,7 +19,4 @@ interface TimerDao {
 
     @Delete
     fun delete(timer: TimerEntity)
-
-    @Query("DELETE FROM TimerEntity")
-    fun clear()
 }

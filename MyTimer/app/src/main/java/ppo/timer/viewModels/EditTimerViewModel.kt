@@ -5,7 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ppo.timer.db.TimerEntity
-import ppo.timer.databinding.FragmentTabataEditBinding
+import ppo.timer.databinding.FragmentTimerEditBinding
 import java.lang.String.*
 
 class EditTimerViewModel: ViewModel() {
@@ -18,7 +18,7 @@ class EditTimerViewModel: ViewModel() {
         isNewTimer = false
     }
 
-    fun generateTimerForEdit(binding: FragmentTabataEditBinding){
+    fun generateTimerForEdit(binding: FragmentTimerEditBinding){
         if (!isNewTimer) {
             val curr: TimerEntity = timer.value!!
             binding.apply {
@@ -35,7 +35,7 @@ class EditTimerViewModel: ViewModel() {
         }
     }
 
-    fun saveTimer(binding: FragmentTabataEditBinding, viewModel: TimerViewModel) {
+    fun saveTimer(binding: FragmentTimerEditBinding, viewModel: TimerViewModel) {
         binding.apply {
             val name = timerTitle.text.toString()
             val warm_up = warmUpSeconds.text.toString().toInt()

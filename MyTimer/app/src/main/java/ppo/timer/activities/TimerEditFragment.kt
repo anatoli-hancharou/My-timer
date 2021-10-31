@@ -15,14 +15,14 @@ import com.github.dhaval2404.colorpicker.model.ColorSwatch
 import ppo.timer.R
 import ppo.timer.viewModels.TimerViewModel
 import ppo.timer.viewModels.TabataViewModelFactory
-import ppo.timer.databinding.FragmentTabataEditBinding
+import ppo.timer.databinding.FragmentTimerEditBinding
 import ppo.timer.utility.TimerApp
 import ppo.timer.viewModels.EditTimerViewModel
 
 
 class TimerEditFragment : Fragment(){
 
-    private val binding by lazy { FragmentTabataEditBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentTimerEditBinding.inflate(layoutInflater) }
     private val viewModel: EditTimerViewModel by activityViewModels()
     private val timerViewModel: TimerViewModel by viewModels {
         TabataViewModelFactory((activity?.application as TimerApp).repository)

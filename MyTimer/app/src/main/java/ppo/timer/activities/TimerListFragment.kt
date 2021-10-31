@@ -14,7 +14,7 @@ import ppo.timer.R
 import ppo.timer.db.TimerEntity
 import ppo.timer.viewModels.TimerViewModel
 import ppo.timer.viewModels.TabataViewModelFactory
-import ppo.timer.databinding.FragmentTabataListBinding
+import ppo.timer.databinding.FragmentTimerListBinding
 import ppo.timer.utility.TimerApp
 import ppo.timer.adapter.TimerListAdapter
 import ppo.timer.viewModels.EditTimerViewModel
@@ -22,7 +22,7 @@ import ppo.timer.viewModels.EditTimerViewModel
 
 class TimerListFragment : Fragment() {
 
-    private val binding: FragmentTabataListBinding by lazy { FragmentTabataListBinding.inflate(layoutInflater) }
+    private val binding: FragmentTimerListBinding by lazy { FragmentTimerListBinding.inflate(layoutInflater) }
     private val viewModel: EditTimerViewModel by activityViewModels()
     private val timerViewModel: TimerViewModel by viewModels {
         TabataViewModelFactory((activity?.application as TimerApp).repository)

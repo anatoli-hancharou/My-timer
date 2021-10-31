@@ -18,9 +18,4 @@ class TimerRepository(private val timerDao : TimerDao) {
     fun deleteTimer(timer: TimerEntity){
         timerDao.delete(timer)
     }
-
-    fun clear(){
-        timerDao.clear()
-    }
-
 }
