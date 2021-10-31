@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="false"
+    android:isScrollContainer="false"
+    tools:context=".ui.fragments.TimerEditFragment">
+
+    <EditText
+        android:id="@+id/timer_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/edit_title_text_margin"
+        android:hint="@string/timer_title_hint"
+        android:inputType="text"
+        android:maxLength="20"
+        android:textAlignment="center"
+        android:textSize="@dimen/edit_title_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/edit_table_margin"
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_title">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/warm_up"
+                android:textColor="@color/Text"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <ImageButton
+                android:id="@+id/minus_warm_up"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_minus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/warm_up_seconds"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="13"
+                android:ems="12"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:paddingBottom="15dp"
+                android:text="15"
+                android:editable="false"
+                android:textAlignment="center"
+                android:textColor="?attr/haloColor"
+                android:textSize="19sp"
+                app:layout_constraintVertical_bias="0.8"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/plus_warm_up"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_plus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/work"
+                android:textColor="@color/Text"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <ImageButton
+                android:id="@+id/minus_work"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_minus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/work_seconds"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="13"
+                android:autofillHints="10"
+                android:ems="12"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:paddingBottom="15dp"
+                android:text="20"
+                android:textAlignment="center"
+                android:textColor="?attr/haloColor"
+                android:textSize="19sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/plus_work"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_plus"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/rest"
+                android:textColor="@color/Text"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <ImageButton
+                android:id="@+id/minus_rest"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_minus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/rest_seconds"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="13"
+                android:autofillHints="10"
+                android:ems="12"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:paddingBottom="15dp"
+                android:text="10"
+                android:textAlignment="center"
+                android:textColor="?attr/haloColor"
+                android:textSize="19sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/plus_rest"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_plus"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/repeats"
+                android:textColor="@color/Text"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <ImageButton
+                android:id="@+id/minus_repeats"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_minus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/repeats"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="13"
+                android:autofillHints="10"
+                android:ems="12"
+                android:text="1"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:paddingBottom="15dp"
+                android:textAlignment="center"
+                android:textColor="?attr/haloColor"
+                android:textSize="19sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/plus_repeats"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_plus"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/cycles"
+                android:textColor="@color/Text"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <ImageButton
+                android:id="@+id/minus_cycle"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_minus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/cycles"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="13"
+                android:autofillHints="10"
+                android:ems="12"
+                android:text="1"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:paddingBottom="15dp"
+                android:textAlignment="center"
+                android:textColor="?attr/haloColor"
+                android:textSize="19sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/plus_cycle"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_plus"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/cooldown"
+                android:textColor="@color/Text"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <ImageButton
+                android:id="@+id/minus_cooldown"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_minus"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/cooldown_seconds"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="13"
+                android:autofillHints="10"
+                android:ems="12"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:paddingBottom="15dp"
+                android:text="15"
+                android:textAlignment="center"
+                android:textColor="?attr/haloColor"
+                android:textSize="19sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/plus_cooldown"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/circle_button"
+                android:padding="6dp"
+                app:srcCompat="@drawable/ic_plus"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/row_margin_bottom">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="end"
+                android:text="@string/timer_color"
+                android:textColor="?attr/haloColor"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/select_color"
+                    android:layout_width="@dimen/color_picker_button_width"
+                    android:layout_height="@dimen/color_picker_button_height"
+                    android:background="@color/green_700"
+                    android:shadowRadius="50" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/button_save_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/table"
+        app:layout_constraintVertical_bias="0.39">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Borders"
+            android:text="@string/done"
+            android:textSize="26sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

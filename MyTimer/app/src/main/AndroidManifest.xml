@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ppo.timer">
+
+    <application
+        android:allowBackup="true"
+        android:name=".utility.TimerApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.MyTimer">
+
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:configChanges="locale"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyTimer.NoActionBar.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.TimerActivity"
+            android:configChanges="orientation"
+            android:theme="@style/Theme.MyTimer"/>
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.MyTimer"/>
+    </application>
+
+</manifest>
