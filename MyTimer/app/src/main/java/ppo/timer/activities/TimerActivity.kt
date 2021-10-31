@@ -1,11 +1,11 @@
-package ppo.timer.ui.activities
+package ppo.timer.activities
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.zeugmasolutions.localehelper.LocaleAwareCompatActivity
-import ppo.timer.data.TimerEntity
+import ppo.timer.db.TimerEntity
 import ppo.timer.databinding.ActivityTimerBinding
 import ppo.timer.viewModels.CDTimerViewModel
 

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="false"
     android:isScrollContainer="false"
-    tools:context=".ui.fragments.TimerEditFragment">
+    tools:context=".activities.TimerEditFragment">
 
     <EditText
         android:id="@+id/timer_title"

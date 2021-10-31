@@ -1,4 +1,4 @@
-package ppo.timer.ui.fragments
+package ppo.timer.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,13 +11,12 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import ppo.timer.R
-import ppo.timer.data.TimerEntity
+import ppo.timer.db.TimerEntity
 import ppo.timer.viewModels.TimerViewModel
 import ppo.timer.viewModels.TabataViewModelFactory
 import ppo.timer.databinding.FragmentTabataListBinding
-import ppo.timer.ui.activities.TimerActivity
 import ppo.timer.utility.TimerApp
-import ppo.timer.utility.TimerListAdapter
+import ppo.timer.adapter.TimerListAdapter
 import ppo.timer.viewModels.EditTimerViewModel
 
 

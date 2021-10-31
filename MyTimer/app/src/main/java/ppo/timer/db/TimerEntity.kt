@@ -1,4 +1,4 @@
-package ppo.timer.data
+package ppo.timer.db
 
 import android.os.Parcelable
 import androidx.annotation.NonNull

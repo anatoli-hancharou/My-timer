@@ -1,11 +1,11 @@
-package ppo.timer.utility
+package ppo.timer.adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ppo.timer.data.TimerEntity
+import ppo.timer.db.TimerEntity
 import ppo.timer.databinding.RecyclerviewItemBinding
 
 

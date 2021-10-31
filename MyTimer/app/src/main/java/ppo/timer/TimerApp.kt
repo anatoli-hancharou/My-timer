@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.zeugmasolutions.localehelper.LocaleAwareApplication
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
-import ppo.timer.data.TimerDatabase
-import ppo.timer.data.TimerRepository
+import ppo.timer.db.TimerDatabase
+import ppo.timer.db.TimerRepository
 import java.util.*
 
 class TimerApp : LocaleAwareApplication() {

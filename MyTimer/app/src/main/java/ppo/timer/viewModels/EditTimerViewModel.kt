@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ppo.timer.data.TimerEntity
+import ppo.timer.db.TimerEntity
 import ppo.timer.databinding.FragmentTabataEditBinding
 import java.lang.String.*
 

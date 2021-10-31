@@ -3,8 +3,8 @@ package ppo.timer.viewModels
 import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import ppo.timer.data.TimerEntity
-import ppo.timer.data.TimerRepository
+import ppo.timer.db.TimerEntity
+import ppo.timer.db.TimerRepository
 
 class TimerViewModel(private val repo: TimerRepository) : ViewModel() {
     val allTimers: LiveData<List<TimerEntity>> = repo.allTimers

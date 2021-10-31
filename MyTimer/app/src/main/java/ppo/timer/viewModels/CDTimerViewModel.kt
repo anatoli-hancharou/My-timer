@@ -8,7 +8,7 @@ import android.os.CountDownTimer
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import ppo.timer.R
-import ppo.timer.data.TimerEntity
+import ppo.timer.db.TimerEntity
 
 class CDTimerViewModel(application: Application): AndroidViewModel(application) {
     private lateinit var timer: TimerEntity

@@ -1,6 +1,8 @@
-package ppo.timer.data
+package ppo.timer.db
 
 import androidx.lifecycle.LiveData
+import ppo.timer.db.TimerDao
+import ppo.timer.db.TimerEntity
 
 class TimerRepository(private val timerDao : TimerDao) {
     val allTimers : LiveData<List<TimerEntity>> = timerDao.getAllTimers()

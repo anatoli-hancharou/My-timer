@@ -1,4 +1,4 @@
-package ppo.timer.data
+package ppo.timer.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

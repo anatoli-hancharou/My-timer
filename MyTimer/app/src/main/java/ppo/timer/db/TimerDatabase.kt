@@ -1,13 +1,10 @@
-package ppo.timer.data
+package ppo.timer.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import ppo.timer.R
 
 @Database(entities = [TimerEntity::class], version = 2, exportSchema = false)
 abstract class TimerDatabase : RoomDatabase() {

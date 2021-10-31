@@ -1,4 +1,4 @@
-package ppo.timer.ui.activities
+package ppo.timer.activities
 
 import android.content.Intent
 import android.content.SharedPreferences

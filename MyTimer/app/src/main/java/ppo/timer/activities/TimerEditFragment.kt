@@ -1,4 +1,4 @@
-package ppo.timer.ui.fragments
+package ppo.timer.activities
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
